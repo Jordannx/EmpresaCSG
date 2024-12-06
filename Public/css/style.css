@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente predeterminada del cuerpo como Arial, con una fuente secundaria sans-serif si no está disponible. */
+    margin: 0; /* Elimina el margen exterior predeterminado que el navegador aplica al cuerpo de la página. */
+    padding: 0; /* Elimina el relleno interior predeterminado del cuerpo. */
+    background-color: #f4f4f9; /* Establece un color de fondo gris claro para el cuerpo de la página. */
+    color: #333; /* Define un color de texto gris oscuro para el cuerpo de la página. */
+}
+
+header {
+    background-color:  #2c3e50; /* Establece un fondo verde para el encabezado. */
+    color: white; /* Establece el color del texto del encabezado en blanco. */
+    text-align: center; /* Centra el texto dentro del encabezado. */
+    padding: 1rem; /* Añade un relleno de 1 rem en todos los lados del encabezado, lo que da un poco de espacio alrededor del contenido. */
+}
+
+main {
+    padding: 2rem; /* Añade un relleno de 2 rem alrededor del contenido principal. */
+    text-align: center; /* Centra el texto dentro del área principal del contenido. */
+}
+
+footer {
+    background-color: #333; /* Establece un fondo gris oscuro para el pie de página. */
+    color: white; /* Establece el color del texto del pie de página en blanco. */
+    text-align: center; /* Centra el texto dentro del pie de página. */
+    padding: 1rem; /* Añade un relleno de 1 rem en todos los lados del pie de página, para espaciar el contenido. */
+    position: absolute; /* Define la posición como absoluta, lo que significa que se posicionará respecto al contenedor más cercano que no tenga un valor de posición `static`. */
+    bottom: 0; /* Coloca el pie de página al fondo de la página (o contenedor) sin importar cuánto contenido haya en la página. */
+    width: 100%; /* Hace que el pie de página ocupe todo el ancho de la ventana. */
+}
+
+
+/* Estilos para la barra de navegación */
+.navbar {
+    list-style: none; /* Elimina los puntos de la lista, ya que estamos usando <ul> con <li>. */
+    margin: 0; /* Elimina el margen exterior por defecto de la lista. */
+    padding: 0; /* Elimina el padding (relleno) por defecto de la lista. */
+    display: flex; /* Aplica un diseño flexible para alinear los elementos dentro de la barra de navegación en línea horizontal. */
+    justify-content: center; /* Alinea los elementos de la lista al centro horizontalmente. */
+    background-color: #2c3e50; /* Aplica un color de fondo gris oscuro a la barra de navegación. */
+}
+
+.navbar li {
+    margin: 0 15px; /* Agrega un margen de 15px a la izquierda y derecha de cada <li> para separarlos. */
+}
+
+.navbar a {
+    text-decoration: none; /* Elimina el subrayado por defecto de los enlaces. */
+    color: #e2e8ee; /* Aplica un color gris oscuro al texto de los enlaces. */
+    font-weight: bold; /* Hace el texto de los enlaces en negrita. */
+    padding: 10px 15px; /* Añade un relleno de 10px vertical y 15px horizontal dentro de cada enlace para hacerlo más grande. */
+    display: block; /* Cambia el comportamiento de los enlaces para que ocupen toda la altura disponible (usado generalmente con padding para mejorar la zona clicable). */
+    transition: background-color 0.3s; /* Define una transición suave para el cambio de color de fondo cuando el usuario pasa el ratón sobre el enlace. */
+}
+
+.navbar a:hover {
+    background-color: #2c3e50; /* Cambia el color de fondo a gris oscuro cuando el usuario pasa el ratón sobre el enlace (hover). */
+    border-radius: 5px; /* Aplica bordes redondeados de 5px al fondo del enlace cuando se pasa el ratón. */
+}
+
+
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #2c3e50;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Apilar las secciones verticalmente */
+        gap: 20px; /* Reducir el espacio entre las secciones */
+    }
+
+    .image-section, .content-section, .sidebar {
+        max-width: 100%; /* Asegurar que las secciones ocupen el 100% en pantallas pequeñas */
+        margin: 0 auto;
+    }
+
+    .button-container {
+        flex-direction: column; /* Colocar los botones uno debajo del otro en pantallas pequeñas */
+        align-items: center;
+    }
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-section h1 {
+    color: #1e3264;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    color: #555555;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de especialidades */
+.specialties {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e9ecef;
+    margin-top: 20px;
+}
+
+.specialties h2 {
+    color: #343a40;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.specialties p {
+    color: #555555;
+    font-size: 1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Tarjetas de especialidades */
+.specialty-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #1e3264;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555555;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #777777;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+ @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Apilar las secciones verticalmente */
+        gap: 20px; /* Reducir el espacio entre las secciones */
+    }
+
+    .image-section, .content-section, .sidebar {
+        max-width: 100%; /* Asegurar que las secciones ocupen el 100% en pantallas pequeñas */
+        margin: 0 auto;
+    }
+
+    .button-container {
+        flex-direction: column; /* Colocar los botones uno debajo del otro en pantallas pequeñas */
+        align-items: center;
+    }
+}
+
+
+/*----------------------------------------------------- PESTAÑA NOSOTROS :v -------------------------------------------------------*/
+.content {
+    max-width: 800px; /* Máximo ancho del contenido */
+    margin: 20px auto; /* Centra el contenido */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+p {
+    line-height: 1.6; /* Aumenta el espacio entre líneas */
+}
+
